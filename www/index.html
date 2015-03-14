@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <!--The following two were added from the tutorial  -->
+    <script src="lib/collide/collide.js"></script>
+    <script src="lib/ionic-contrib-tinder-cards/ionic.tdcards.js"></script>
+
+    <!--Ivius fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        .sacramento { font-family: Sacramento, cursive;}
+        .josefin { font-family: Josefin Sans, sans-serif;}
+    </style>
+
+  </head>
+  <body ng-app="starter" no-scroll>
+      <ion-pane ng-controller="CardsCtrl">
+          <ion-header-bar class="bar-dark">
+              <h1 class="sacramento" style="color:LightGrey">Ivius</h1>
+          </ion-header-bar>
+ 
+          <td-cards>
+              <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="car-{{$index}}">
+                  <div class="title">
+                      {{card.title}}
+                  </div>
+                  <div class="image" ng-controller="CardCtrl">
+                      <div class="no-text overlayBox"><div class="noBox boxed">Nope</div></div>
+                      <img ng-src="{{card.image}}">
+                      <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Like</div></div>
+                  </div>
+              </td-card>
+          </td-cards>
+      </ion-pane>
+  </body>
+</html>
