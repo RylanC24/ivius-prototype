@@ -42,7 +42,7 @@
           </ion-header-bar>
  
           <td-cards>
-              <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="car-{{$index}}">
+              <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
                   <div class="title">
                       {{card.title}}
                   </div>
