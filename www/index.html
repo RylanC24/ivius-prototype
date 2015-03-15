@@ -38,17 +38,17 @@
   <body ng-app="starter" no-scroll>
       <ion-pane ng-controller="CardsCtrl">
           <ion-header-bar class="bar-dark">
-              <h1 class="sacramento" style="color:LightGrey">Ivius</h1>
+              <h1 class="sacramento" style="color:LightGrey">Suivi</h1>
           </ion-header-bar>
  
           <td-cards>
-              <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
+              <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
                   <div class="title">
-                      {{card.title}}
+                      {{card.name}}
                   </div>
                   <div class="image" ng-controller="CardCtrl">
                       <div class="no-text overlayBox"><div class="noBox boxed">Nope</div></div>
-                      <img ng-src="{{card.image}}">
+                      <img ng-src="{{card.image_urls[0]}}">
                       <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Like</div></div>
                   </div>
               </td-card>
