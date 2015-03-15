@@ -18,7 +18,7 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards'])
 
     .controller('CardsCtrl', function($scope, $http,TDCardDelegate) {
         $scope.addCard = function(i) {
-            $http.get('http://ivius.sangaline.com/random/Women').
+            $http.get('http://dev.sangaline.com/random/Women').
                 success(function(data, status, headers, config) {
                     data.id = Math.random();
                     $scope.cards.unshift(angular.extend({}, data));
