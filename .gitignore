@@ -24,3 +24,16 @@ proguard/
 
 # Log Files
 *.log
+
+ionic.project
+package.json
+.bowerrc
+bower*
+*.xml
+gulpfile.js
+hooks/
+platforms/
+plugins/
+scss/
+www/img/
+www/lib/
