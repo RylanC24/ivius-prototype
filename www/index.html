@@ -43,13 +43,21 @@
  
           <td-cards>
               <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
-                  <div class="title">
-                      {{card.name}}
+                  <div class="title josefin" style="color:LightGrey; background:#444444">
+                      <b>{{card.name}}</b>
                   </div>
                   <div class="image" ng-controller="CardCtrl">
                       <div class="no-text overlayBox"><div class="noBox boxed">Nope</div></div>
-                      <img ng-src="{{card.image_urls[0]}}">
+                      <img ng-src="{{card.image}}">
                       <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Like</div></div>
+                      <div style="position:absolute;bottom:0;padding:15px;left:1px;width:150px;font-weight:bold;color:#444444;font-size:25px;text-shadow: 2px 2px 2px 2px #CBCBCB">
+                          {{card.price}}
+                      </div>
+                      <div style="position:absolute;bottom:0;padding:5px;right:1px;width:95px;color:#444444;fong-size:15px;font-weight:bold">
+                          <p style="border-style:solid; border-color:#CBCBCB">Click <a href="{{card.url}}">HERE</a> to purchase</p>
+                      </div>
+                      <script>
+                      </script>
                   </div>
               </td-card>
           </td-cards>
