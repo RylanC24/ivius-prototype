@@ -34,7 +34,7 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards'])
         }
 
         $scope.cards = [];
-        for(var i = 0; i < 2; i++) $scope.addCard();
+        for(var i = 0; i < 5; i++) $scope.addCard();
     })
 
     .controller('CardCtrl', function($scope, TDCardDelegate) {
@@ -47,5 +47,4 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards'])
             console.log('Right swipe');
             $scope.addCard();
         }
-    });
-
+    })
