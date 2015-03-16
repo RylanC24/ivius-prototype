@@ -30,6 +30,10 @@
     <link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
 
     <style type="text/css">
+        .hprice {
+            color: #444444;
+            text-shadow: -1px -1px 0 #CBCBCB, 1px -1px 0 #CBCBCB, -1px 1px 0 #CBCBCB, 1px 1px 0 #CBCBCB;
+        }
         .sacramento { font-family: Sacramento, cursive;}
         .josefin { font-family: Josefin Sans, sans-serif;}
     </style>
@@ -51,10 +55,10 @@
                       <img ng-src="{{card.image}}">
                       <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Like</div></div>
                       <div style="position:absolute;bottom:0;padding:15px;left:1px;width:150px;font-weight:bold;color:#444444;font-size:25px;text-shadow: 2px 2px 2px 2px #CBCBCB">
-                          {{card.price}}
+                          <div class="hprice">{{card.price}}</div>
                       </div>
                       <div style="position:absolute;bottom:0;padding:5px;right:1px;width:95px;color:#444444;fong-size:15px;font-weight:bold">
-                          <p style="border-style:solid; border-color:#CBCBCB">Click <a href="{{card.url}}" onclick="window.open(this.href,'_system','location=no');return false;">HERE</a> to purchase</p>
+                          <div class="hprice"><p style="border-style:solid; border-color:#CBCBCB">Click <a href="{{card.url}}" onclick="window.open(this.href,'_system','location=no');return false;">HERE</a> to purchase</p></div>
                       </div>
                       <script>
                       </script>
