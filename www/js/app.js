@@ -39,12 +39,12 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards'])
 
     .controller('CardCtrl', function($scope, TDCardDelegate) {
         $scope.cardSwipedLeft = function(index) {
-            console.log('Left swipe');
+//            console.log('Left swipe');
             $scope.addCard();
         }
 
         $scope.cardSwipedRight = function(index) {
-            console.log('Right swipe');
+//            console.log('Right swipe');
             $scope.addCard();
         }
     })
