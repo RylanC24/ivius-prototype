@@ -46,12 +46,12 @@
           </ion-header-bar>
  
           <td-cards>
-              <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
+              <td-card id="td-card" ng-repeat="card in cards track by card.id" on-destroy="cardDestroyed($index)" on-swipe="cardSwiped($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" on-transition-left="transitionLeft(card)" on-transition-right="transitionRight(card)" on-transition-out="transitionOut(card)" class="card-{{$index}}">
                   <div class="title josefin" style="color:LightGrey; background:#444444">
                       <b>{{card.name}}</b>
                   </div>
                   <div class="image" ng-controller="CardCtrl">
-                      <div class="no-text overlayBox"><div class="noBox boxed">Nope</div></div>
+                      <div class="no-text overlayBox"><div class="noBox boxed">Trash</div></div>
                       <img ng-src="{{card.image}}">
                       <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Like</div></div>
                       <div style="position:absolute;bottom:0;padding:15px;left:1px;width:150px;font-weight:bold;color:#444444;font-size:25px;text-shadow: 2px 2px 2px 2px #CBCBCB">
